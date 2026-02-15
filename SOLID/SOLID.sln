@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCP", "OCP\OCP.csproj", "{7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSP", "LSP\LSP.csproj", "{EB9C4C6A-7B62-451F-B2A4-5D4F5C800E97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISP", "ISP\ISP.csproj", "{9041C1DC-6D86-4DF8-8E02-DC0BFC947439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIP", "DIP\DIP.csproj", "{8655F146-1B7D-43A2-9388-725685676108}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{EB9C4C6A-7B62-451F-B2A4-5D4F5C800E97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB9C4C6A-7B62-451F-B2A4-5D4F5C800E97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB9C4C6A-7B62-451F-B2A4-5D4F5C800E97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9041C1DC-6D86-4DF8-8E02-DC0BFC947439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9041C1DC-6D86-4DF8-8E02-DC0BFC947439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9041C1DC-6D86-4DF8-8E02-DC0BFC947439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9041C1DC-6D86-4DF8-8E02-DC0BFC947439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8655F146-1B7D-43A2-9388-725685676108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8655F146-1B7D-43A2-9388-725685676108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8655F146-1B7D-43A2-9388-725685676108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8655F146-1B7D-43A2-9388-725685676108}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
