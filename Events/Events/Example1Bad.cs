@@ -11,14 +11,6 @@
             TemperatureChanged?.Invoke(this, new TemperatureEventArgs(_temperature));
         }
 
-        public async Task MonitoringTemperature()
-        {
-            while (true)
-            {
-                GetTemperature();
-                await Task.Delay(5000);
-            }
-        }
     }
 
     public class TemperatureEventArgs : EventArgs
@@ -68,8 +60,10 @@
         public void CreateTemperatureWindow(int id)
         {
             new TemperatureWindow(_sensor, id);
+
             Console.WriteLine("Вікно температури створено");
             GetTemperature();
+
         }
 
     }
