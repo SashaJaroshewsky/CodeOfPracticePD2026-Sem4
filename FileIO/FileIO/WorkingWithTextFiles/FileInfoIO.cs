@@ -66,31 +66,35 @@
             var file = new FileInfo("new.txt");
             try
             {
-                
-                using (var stream = file.Create()) // Створює файл "new.txt" на диску і повертає FileStream для запису
-                {
-                    using (StreamWriter writer = new StreamWriter(stream))
-                    {
+                // using var stream = file.Create(); // Створює файл "new.txt" на диску і повертає FileStream для 
+                // Коли ми створюємо потік через Create(), він доступний лише для запису
+                // Створювати файл через Create() і подібні методи потрібен тільки якщо хочете контролювати потік на рівні FileStream.
+                // Для простого запису тексту достатньо StreamWriter(fileName) або File.WriteAllText().
 
-                        writer.WriteLine("Hello, World!");
-                    }
+                using (var writer = new StreamWriter(file.Name))
+                {
+                    writer.WriteLine("Hello, World!");
+                    writer.WriteLine(file.Name);
+                    writer.WriteLine(file.FullName);
+                    writer.WriteLine(file.Extension);
+                    writer.WriteLine(file.Length);
+                    writer.WriteLine(file.CreationTime);
+                    writer.WriteLine(file.LastWriteTime);
+                    writer.WriteLine(file.Exists);
+                    writer.WriteLine(file.DirectoryName);
+                    writer.WriteLine(file.IsReadOnly);
                 }
+                // File.WriteAllText(file.Name, "Hello, World!"); // Це більш простий спосіб запису тексту в файл без необхідності контролювати потік.
 
                 // Відкриваємо файл для читання
-                using (var stream1 = file.OpenRead())
-                {
-                    // Читаємо з файлу
-                    Console.WriteLine(file.Name);
-                    Console.WriteLine(file.FullName);
-                    Console.WriteLine(file.Extension);
-                    Console.WriteLine(file.Length);
-                    Console.WriteLine(file.CreationTime);
-                    Console.WriteLine(file.LastWriteTime);
-                    Console.WriteLine(file.Exists);
-                    Console.WriteLine(file.DirectoryName);
-                    Console.WriteLine(file.IsReadOnly);
+                using var stream1 = file.OpenRead();
 
-                }
+                // Читаємо з файлу
+                string content;
+                using var reader = new StreamReader(stream1);
+                content =  reader.ReadToEnd();
+                Console.WriteLine(content);
+
 
             }
             catch (FileNotFoundException ex)
