@@ -5,13 +5,13 @@
         static void Main(string[] args)
         {
             Serialization serialization = new Serialization();
-            serialization.Example();
+            //serialization.Example();
 
             Deserialization deserialization = new Deserialization();
             deserialization.Example();
 
-            serialization.Example2();
-            serialization.Example3();
+            //serialization.Example2();
+            //serialization.Example3();
         }
     }
 }

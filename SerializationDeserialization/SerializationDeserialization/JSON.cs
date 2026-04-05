@@ -5,6 +5,7 @@
 
     internal class JSON
     {
+        public string Name { get; set; }
         // Приклад:
         // { - початок об’єкта
         //  "Name": "Anna", - поле Name зі значенням "Anna"// Назва поля в лапках, двокрапка, значення в лапках (рядок)

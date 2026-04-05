@@ -22,14 +22,11 @@ namespace SerializationDeserialization
             if (player != null)
             {
                 player.ShowInfo();
-                Console.WriteLine("sdrh");
-                
             }
             else
             {
                 Console.WriteLine("Failed to load player.");
             }
-            
         }
     }
 }

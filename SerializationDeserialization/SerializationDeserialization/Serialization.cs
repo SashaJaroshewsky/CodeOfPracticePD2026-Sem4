@@ -14,7 +14,7 @@ namespace SerializationDeserialization
         public string Name { get; set; }
         public int Level { get; set; }
 
-        //[JsonInclude]
+        [JsonInclude]
         private int health = 100; // Це поле не буде серіалізовано, оскільки воно не є публічним властивістю
         // Якщо потрібно серіалізувати приватне поле, можна використовувати атрибут [JsonInclude] або створити публічну властивість для нього.
         // Але зазвичай рекомендується серіалізувати лише публічні властивості, щоб зберегти інкапсуляцію та контроль над даними.
@@ -51,7 +51,7 @@ namespace SerializationDeserialization
         // JsonSerializerOptions - це клас, який дозволяє налаштовувати поведінку серіалізації та десеріалізації JSON.
         // Він містить різні властивості, які можна використовувати для контролю формату JSON, обробки null-значень, іменування полів та інших аспектів серіалізації.
 
-        public string CustomSerialization( Player player)
+        public string CustomSerialization(Player player)
         {
             
             var options = new JsonSerializerOptions
